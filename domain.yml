@@ -1,0 +1,97 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - out_of_scope
+  - need_appointment
+  - inform
+  - thank_you
+
+entities:
+  - first_name
+  - last_name
+  - email
+  - phone_number
+  - appointment_type
+  - appointment_with
+  - date
+  - time
+  - credit_card
+
+responses:
+  utter_greet:
+  - text: "Hey! Welcome to Wicked Hair."
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_out_of_scope:
+  - text: "I'm not sure I understood you correctly. Do you want to book an Appointment?"
+
+  utter_thank_you:
+  - text: "Your welcome."
+
+  utter_ask_first_name:
+  - text: "Can I get your first name please?"
+
+  utter_ask_last_name:
+  - text: "And your last name or family name is?"
+
+  utter_ask_email:
+  - text: "What email address would you like to use for this appointment?"
+
+  utter_ask_phone_number:
+  - text: "What's your phone number?"
+
+  utter_ask_appointment_type:
+  - text: "Which type of appointment would you like to book? (Cut and Style (Women), Cut and Style (Men), Dye (Full head), or Dye (Roots Touchup))"
+
+  utter_ask_appointment_with:
+  - text: "Who would you like to book the appointment with? (Sally, Ally, Ann, or Frank)"
+
+  utter_ask_date:
+  - text: "On which date would you like to book the appointment?"
+
+  utter_ask_time:
+  - text: "At what time would you like your appointment?"
+
+  utter_ask_credit_card:
+  - text: "What is your credit card number? If there is a no-show, $20 will be charged to the card."
+
+slots:
+  first_name:
+    type: unfeaturized
+  last_name:
+    type: unfeaturized
+  email:
+    type: unfeaturized
+  phone_number:
+    type: unfeaturized
+  appointment_type:
+    type: unfeaturized
+  appointment_with:
+    type: unfeaturized
+  date:
+    type: unfeaturized
+  time:
+    type: unfeaturized
+  credit_card:
+    type: unfeaturized
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+forms:
+  - book_appointment
